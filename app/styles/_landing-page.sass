@@ -2,21 +2,38 @@
 	font-family: 'Montserrat', sans-serif;
 	display: flex
 	flex-flow: column
+	
+	.desktop
+		display: none
 
 	.phone-text, a
+		width: 100%
+		display: flex
+		justify-content: center
+		align-items: center
 		color: $white
 		font-family: Montserrat
 		font-weight: 700
 		font-size: 14px
 		text-decoration: none
+		margin-bottom: 20px
 		&:hover
 			text-decoration: underline
+		img
+			margin-right: 10px
+	a 
+		margin-bottom: 0
 	.top-header
+		display: flex
+		justify-content: center
+
+
 		.phone-text
 			display: none
 	.logo
-		height: 30px
-		width: auto
+		width: 276px
+		height: auto
+		padding: 20px
 
 	.form-wrapper
 		position: relative	
@@ -33,22 +50,36 @@
 		
 	.content
 		text-align: center
-		width: 90%
-		margin-left: 5%
-		h1
-			font-family: Montserrat
-			font-weight: normal
-			font-size: 24px
-			color: $text-gray
-			
+		width: 80%
+		margin-left: 10%
+	h1
+		font-family: Montserrat
+		font-weight: 600
+		font-size: 24px
+		color: $white
+		text-align: center
+		
+	p
+		font-family: inherit
+		font-size: 14px
+		line-height: 24px
+		color: $text-gray
+
+	.content-mobile
+		display: block
+		background-color: #eeeeee
+		padding: 10px 0
 		p
-			font-family: inherit
-			font-size: 14px
-			line-height: 24px
-			color: $text-gray
-			
+			width: 80%
+			margin-left: 10%
+			text-align: center
+	
+
+		
 
 	@media screen and (min-width: 768px)
+		.desktop
+			display: flex
 		.top-header
 			width: 100%
 			display: flex
@@ -66,6 +97,7 @@
 			display: flex
 			flex-flow: row
 			align-items: center
+			justify-content: center
 			padding: 20px
 			letter-spacing: 1px
 			img
@@ -74,7 +106,7 @@
 		.hero
 			background-image: url(../images/header-img.jpg)
 			flex-flow: row wrap
-			min-height: 770px
+			min-height: 920px
 			height: 80vh
 			align-items: center
 			justify-content: center
@@ -83,16 +115,27 @@
 			text-align: left
 			width: 380px
 			margin-right: 20px
-			h2
-				margin-bottom: 20px
-			h1, p
-				color: $white
-			a
-				font-size: 16px
+		h1
+			font-weight: normal
+			margin-bottom: 20px
+		h1, p
+			color: $white
+		a
+			font-size: 16px
 		.form
 			width: 400px
 			background-color: rgba(239,238,237, 0.85) //#efeeed
 			margin-bottom: 30px
+
+		.content-mobile
+			display: none
+		
+
+
+
+	@media screen and (min-width: 1024px)
+		.hero
+			min-height: 780px
 
 footer
 	background-color: #2d3034
@@ -126,15 +169,17 @@ footer
 
 	.link-group
 		color: $white
-		width: 400px
+		width: 500px
 		height: 40px
 		display: flex
 		justify-content: space-between
 		align-items: center
 		margin: auto
+
 		a
 			font-size: 12px
 			font-weight: normal
+			padding: 0 5px 
 	p
 		text-align: center
 		font-size: 10px

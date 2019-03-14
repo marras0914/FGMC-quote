@@ -5,14 +5,14 @@
 	flex-flow: row wrap
 	justify-content: space-between
 	-ms-flex-pack: space-between
-	padding: 40px
+	padding: 20px 40px 40px
 
 	p
 		text-align: center
-		color: #646464
+		color: $white
 		font-weight: 600
 		margin: 0 auto 10px
-
+		
 	input, select, textarea
 		background-color: $white
 		color: $text-gray
@@ -30,7 +30,7 @@
 		color: $text-gray
 		
 	.fine-print
-		color: $text-gray
+		color: $white
 		font-size: 12px
 		font-family: Montserrat
 		margin: 0 0 10px
@@ -39,7 +39,7 @@
 		
 	#form-submit
 		height: auto
-		width: 200px
+		width: 100%
 		margin: auto
 		padding: 16px 0
 		font-size: 14px
@@ -66,3 +66,10 @@
 	@media screen and (min-width: 768px)
 		#first_name, #last_name
 			width: 48%
+		#form-submit
+			width: 200px
+		p
+			color: $white
+
+		.fine-print
+			color: $text-gray
