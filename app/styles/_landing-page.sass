@@ -80,6 +80,8 @@
 	@media screen and (min-width: 768px)
 		.desktop
 			display: flex
+		.mobile 
+			display: none !important
 		.top-header
 			width: 100%
 			display: flex
@@ -88,13 +90,14 @@
 			.phone-text
 				display: flex
 				font-size: 14px
+				width: auto
 		.logo
 			width: 276px
 			height: auto
 			padding: 20px
 
 		.phone-text
-			display: flex
+			display: none
 			flex-flow: row
 			align-items: center
 			justify-content: center
@@ -136,7 +139,8 @@
 	@media screen and (min-width: 1024px)
 		.hero
 			min-height: 780px
-
+		.phone-text
+			display: flex
 footer
 	background-color: #2d3034
 	color: $white			

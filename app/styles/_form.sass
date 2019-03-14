@@ -62,14 +62,21 @@
 		.fa-refresh
 			opacity: 1
 			transform: scale(1)
-
+	
+	.error 
+		font-family: inherit
+		font-size: 12px
+		color: #c73e3e
+	
 	@media screen and (min-width: 768px)
 		#first_name, #last_name
 			width: 48%
 		#form-submit
 			width: 200px
 		p
-			color: $white
+			color: $text-gray
 
 		.fine-print
 			color: $text-gray
+		#first_name-error
+			display: none !important

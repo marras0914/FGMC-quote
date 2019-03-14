@@ -50,6 +50,7 @@
 
             <!-- Form -->  
             <form 
+              id="form"
               class="form form-v1"
               name="lead" 
               method="post"
@@ -57,8 +58,8 @@
               > 
 
               <p>Get in touch today for a free rate quote.</p>
-              <input type="text" id="first_name"  name="first_name" value="" required placeholder="First Name*">
-              <input type="text" id="last_name" name="last_name" value=""  required  placeholder="Last Name*">
+              <input type="text" minlength="2" id="first_name"  name="first_name" value="" required placeholder="First Name*">
+              <input type="text" minlength="2" id="last_name" name="last_name" value=""  required  placeholder="Last Name*">
               <input type="email" id="email" name="email" value="" required  placeholder="Email Address*">
               <input type="text" name="phone" required placeholder="Phone Number*">
 
@@ -116,7 +117,7 @@
                   <option value="WI">Wisconsin</option>
                   <option value="WY">Wyoming</option>
               </select>
-                <input type="text" name="zipcode" id="zipcode" placeholder="Zipcode*">
+                <input type="text" name="zipcode" id="zipcode" maxlength="7" placeholder="Zipcode*">
                 
                 <input type="hidden" name="landing_page" value="Getaquote.goodmortgage.com">
                
