@@ -1,0 +1,68 @@
+.form-v1
+	position: relative
+	display: flex
+	display: -ms-flexbox 
+	flex-flow: row wrap
+	justify-content: space-between
+	-ms-flex-pack: space-between
+	padding: 40px
+
+	p
+		text-align: center
+		color: #646464
+		font-weight: 600
+		margin: 0 auto 10px
+
+	input, select, textarea
+		background-color: $white
+		color: $text-gray
+		border: 1px solid $gray 
+		font-size: 14px 
+		height: 44px
+		width: 100%
+		// padding: 16px 0
+		text-indent: 20px
+		margin: 10px 0
+		box-shadow: none //firefox red border fix
+		font-family: Montserrat
+		 
+	[placeholder]
+		color: $text-gray
+		
+	.fine-print
+		color: $text-gray
+		font-size: 12px
+		font-family: Montserrat
+		margin: 0 0 10px
+		position: relative
+		width: 100%
+		
+	#form-submit
+		height: auto
+		width: 200px
+		margin: auto
+		padding: 16px 0
+		font-size: 14px
+		font-weight: 600
+		line-height: 16px
+		background-color: #00b050
+		color: $white
+		text-transform: uppercase
+		border-style: none
+
+	
+	.fa-refresh
+		color: $white
+		font-size: 18px
+		transform: scale(0.3)
+		opacity: 0
+		transition: scale 0.3s ease-in, opacity 0.3s ease-in
+		
+	.active
+		.fa-refresh
+			opacity: 1
+			transform: scale(1)
+
+	@media screen and (min-width: 768px)
+		#first_name, #last_name
+			width: 48%

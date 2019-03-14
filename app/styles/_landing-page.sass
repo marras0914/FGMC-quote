@@ -1,0 +1,142 @@
+.landing-page
+	font-family: 'Montserrat', sans-serif;
+	display: flex
+	flex-flow: column
+
+	.phone-text, a
+		color: $white
+		font-family: Montserrat
+		font-weight: 700
+		font-size: 14px
+		text-decoration: none
+		&:hover
+			text-decoration: underline
+	.top-header
+		.phone-text
+			display: none
+	.logo
+		height: 30px
+		width: auto
+
+	.form-wrapper
+		position: relative	
+
+	.hero
+		background-image: url(../images/header-img-mobile.jpg)
+		background-repeat: no-repeat 
+		background-position: center
+		background-size: cover
+		height: 100%
+		width: 100%
+		display: flex
+		flex-flow: column
+		
+	.content
+		text-align: center
+		width: 90%
+		margin-left: 5%
+		h1
+			font-family: Montserrat
+			font-weight: normal
+			font-size: 24px
+			color: $text-gray
+			
+		p
+			font-family: inherit
+			font-size: 14px
+			line-height: 24px
+			color: $text-gray
+			
+
+	@media screen and (min-width: 768px)
+		.top-header
+			width: 100%
+			display: flex
+			justify-content: space-between 
+			align-self: flex-start
+			.phone-text
+				display: flex
+				font-size: 14px
+		.logo
+			width: 276px
+			height: auto
+			padding: 20px
+
+		.phone-text
+			display: flex
+			flex-flow: row
+			align-items: center
+			padding: 20px
+			letter-spacing: 1px
+			img
+				margin-right: 10px	
+			
+		.hero
+			background-image: url(../images/header-img.jpg)
+			flex-flow: row wrap
+			min-height: 770px
+			height: 80vh
+			align-items: center
+			justify-content: center
+							
+		.content
+			text-align: left
+			width: 380px
+			margin-right: 20px
+			h2
+				margin-bottom: 20px
+			h1, p
+				color: $white
+			a
+				font-size: 16px
+		.form
+			width: 400px
+			background-color: rgba(239,238,237, 0.85) //#efeeed
+			margin-bottom: 30px
+
+footer
+	background-color: #2d3034
+	color: $white			
+	h3
+		font-family: Montserrat
+		font-weight: 600
+		font-size: 12px
+		text-align: center
+		width: 100%
+		margin: 30px 0
+		letter-spacing: 1px
+
+	.image-group
+		display: flex
+		flex-flow: row
+		justify-content: space-between
+		width: 200px
+		height: 85px
+		margin: auto
+		.bbb
+			height: 23px
+			width: auto
+			margin-top: 4px
+		.hud
+			height: 32px
+			width: auto
+		.zillow
+			height: 50px
+			width: auto
+
+	.link-group
+		color: $white
+		width: 400px
+		height: 40px
+		display: flex
+		justify-content: space-between
+		align-items: center
+		margin: auto
+		a
+			font-size: 12px
+			font-weight: normal
+	p
+		text-align: center
+		font-size: 10px
+		line-height: 20px
+	

@@ -1,0 +1,58 @@
+.page-fgmc
+	
+	// border: red solid 5px
+		
+	.hero
+		.header-img
+			background-image: url(./images/header-bg-mobile.jpg)
+			background-position: right top
+		
+	
+	
+	.form-first  //AB mobile testing form above the fold
+		@media screen and (max-width: 767px)
+			.top-header
+				height: 60px
+				
+			.header-img,
+			.radio-container
+				display: none
+				
+			.left-side
+				.header-content
+					margin-top: 20px
+					h1, h2
+						font-size: 20px
+					h1
+						margin-bottom: 10px
+					h2
+						margin-top: 0
+						line-height: 20px 
+					
+					.sub-text
+						font-size: 20px
+					
+				.form-v1
+					margin-top: 10px
+					
+						
+	@media screen and (min-width: 768px)
+		.desktop
+			display: inline-block
+		.content
+			.quote
+				padding: 60px 0 0
+				margin-bottom: 5px				
+
+	@media screen and (min-width: 1024px)
+		.hero
+			height: 700px
+			.header-img
+				background-image: url(../images/header-bg.jpg)
+				background-position: center
+			
+			.phone-text
+				padding-bottom: 0
+		.content
+			.quote
+				padding-top: 40px
