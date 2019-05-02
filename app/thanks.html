@@ -1,0 +1,156 @@
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>FGMC</title>
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="styles/index.css">
+    <!-- endbuild -->
+    <!-- build:js scripts/modernizr.js -->
+    <script src="scripts/modernizr.js"></script>
+    <!-- endbuild -->
+
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <!-- build:css styles/vendor.css -->
+    <!-- <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css" type="text/css" /> -->
+    <!-- endbuild -->
+  </head>
+  <body>
+    <!--[if IE]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+   
+<div class="landing-page thank-you" >
+ 
+<section class="hero">
+  <div class="top-header">
+    <img src="images/white-logo.png" alt="" class="logo">
+    <a href="tel:8555520525"  class="phone-text" >
+      <img src="images/phone.png" alt="">
+        (855)&nbsp;552&#8208;0525
+    </a>
+  </div> 
+
+  <div class="content" >
+      <h1 >Thank you! We will contact you shortly.</h1>
+
+      <p class="desktop">
+         <p style="color: #ffffff"> If you would like to get started right away, you can call us at</p>
+      </p>
+      <a href="tel:8555520525"  class="phone-text desktop" style="text-align: center; margin: auto; width: auto;display: flex">
+        <img src="images/phone.png" alt="">
+          (855)&nbsp;552&#8208;0525
+      </a>
+  </div>
+            <div>
+            <!-- Form -->  
+            <p id="success" >Thank you, we will contact you shortly.</p>
+           
+</div>
+             
+      
+</section>
+        
+<section class="content-mobile">
+  <p >
+  Whether you’re looking to buy a new home or refinance your existing mortgage, Goodmortgage is here to help. Complete this simple form to get your FREE rate quote today!
+  </p>
+
+  
+</section>
+      
+
+
+<footer>
+    <h3>Telling the Unique Stories of Today’s Borrowers.</h3>
+    <div class="image-group">
+      <img src="images/HUD.png" alt="" class="hud">
+      <img src="images/BBB.png" alt="" class="bbb">
+      <img src="images/Zillow.png" alt="" class="zillow">
+    </div>
+
+      <div class="link-group">
+        <a href=" https://www.goodmortgage.com/terms-of-use">Terms of Use</a>
+        <span>|</span>
+        <a href=" https://www.goodmortgage.com/privacy-policy">Privacy</a>
+        <span>|</span>
+        <a href="https://www.goodmortgage.com/disclosures">Disclosures</a>
+        <span>|</span>
+        <a href=" https://www.goodmortgage.com/state-mortgage-licenses"> State Licensing</a> 
+      </div>
+    <p>
+      First Guaranty Mortgage Corporation® dba goodmortgage.com®  NMLS ID 2917<br>
+5800 Tennyson Parkway, Suite 450, Plano, TX 75024
+
+    </p>
+</footer>
+
+</div> <!-- end .landing-page -->
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='https://www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-XXXXX-X');ga('send','pageview');
+    </script>
+
+
+    <!-- build:js scripts/vendor.js -->
+    <script type="text/javascript" src="/node_modules/jquery/dist/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.js"></script>
+    <!-- endbuild -->
+    <!-- build:js scripts/main.js -->
+    <!-- endbuild -->
+    <script>$('#form').validate({
+      submitHandler: function() { 
+
+
+         $('form').submit(function(event) {
+
+        // get the form data
+        // there are many ways to get this data using jQuery (you can use the class or id also)
+        var formData = {
+            'first_name': $('input[name=first_name]').val(),
+            'last_name':  $('input[name=last_name]').val(),
+            'email': $('input[name=email]').val(),
+            'state': $('input[name=state]').val(),
+            'phone': $('input[name=phone]').val(),
+            'zipcode': $('input[name=zipcode]').val(),
+            'landing_page': $('input[name=landing_page]').val()
+        };
+
+        // process the form
+        $.ajax({
+            type: 'POST', // define the type of HTTP verb we want to use (POST for our form)
+            url: 'https://secure.velocify.com/Import.aspx?Provider=LeadsBridge&Client=FirstGuarantyMortgageCorporationRr&CampaignId=63&XmlResponse=true&AcrossCampaigns=True', 
+            data: formData, 
+            dataType: 'json', 
+            encode: true
+        })
+            // using the done promise callback
+            .done(function(data) {
+
+                // log data to the console so we can see
+                 $('#success').addClass('success');
+
+                // here we will handle errors and validation messages
+            });
+
+        // stop the form from submitting the normal way and refreshing the page
+        event.preventDefault();
+    });
+            
+       
+
+       }
+    });</script>
+  </body>
+</html>
